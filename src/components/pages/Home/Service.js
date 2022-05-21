@@ -22,17 +22,19 @@ const Service = ({ service }) => {
       email: email,
       displayName: user.displayName,
     };
-    axios.post("http://localhost:5000/booking", booking).then((data) => {
-      if (data.insertedId > 0) {
-        toast("Service added");
-      }
-    });
+    axios
+      .post("https://obscure-beyond-94214.herokuapp.com/booking", booking)
+      .then((data) => {
+        if (data.insertedId > 0) {
+          toast("Service added");
+        }
+      });
   };
   return (
     <motion.div
       whileHover={{
         scale: 1.1,
-        transition: { duration: .5 },
+        transition: { duration: 0.5 },
       }}
       class="card lg:w-1/3 bg-base-100 shadow-xl"
     >

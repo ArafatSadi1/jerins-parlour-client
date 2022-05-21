@@ -14,7 +14,7 @@ const CheckoutForm = ({ book }) => {
   const { name, price, picture, about, email, _id, displayName } = book;
 
   useEffect(() => {
-    fetch("http://localhost:5000/create-payment-intent", {
+    fetch("https://obscure-beyond-94214.herokuapp.com/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -79,7 +79,7 @@ const CheckoutForm = ({ book }) => {
         displayName: displayName,
         email: email,
       };
-      fetch(`http://localhost:5000/booking/${_id}`, {
+      fetch(`https://obscure-beyond-94214.herokuapp.com/booking/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",
@@ -97,7 +97,7 @@ const CheckoutForm = ({ book }) => {
     <>
       <form onSubmit={handleSubmit}>
         <CardElement
-         className="input pt-3"
+          className="input pt-3"
           options={{
             style: {
               base: {
@@ -113,17 +113,25 @@ const CheckoutForm = ({ book }) => {
             },
           }}
         />
-        <button className="btn btn-secondary mt-4 block mx-auto" type="submit" disabled={!stripe}>
+        <button
+          className="btn btn-secondary mt-4 block mx-auto"
+          type="submit"
+          disabled={!stripe}
+        >
           Pay
         </button>
       </form>
-      {cardError && <p className="text-red-500 text-center text-sm">{cardError}</p>}
+      {cardError && (
+        <p className="text-red-500 text-center text-sm">{cardError}</p>
+      )}
       {success && (
         <div className="text-green-500">
           {success}
           <p>
             Your Transaction Id Is:
-            <span className="text-orange-500 text-center text-sm">{transactionId}</span>
+            <span className="text-orange-500 text-center text-sm">
+              {transactionId}
+            </span>
           </p>
         </div>
       )}

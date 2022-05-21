@@ -1,16 +1,18 @@
 import React from "react";
 import Service from "./Service";
-import { useQuery } from 'react-query';
+import { useQuery } from "react-query";
 import Loading from "../Shared/Loading";
 
-
 const Services = () => {
+  const { data: services, isLoading } = useQuery("services", () =>
+    fetch("https://obscure-beyond-94214.herokuapp.com/services").then((res) =>
+      res.json()
+    )
+  );
 
-    const {data: services, isLoading} = useQuery('services', ()=>fetch('http://localhost:5000/services').then(res => res.json()));
-
-    if(isLoading){
-      return <Loading></Loading>
-    }
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
   return (
     <div className="lg:px-12 my-12">
       <h2 className="text-3xl text-center font-bold mb-12">

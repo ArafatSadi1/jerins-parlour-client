@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 const MakeAdmin = () => {
   const navigate = useNavigate();
@@ -13,27 +13,27 @@ const MakeAdmin = () => {
   } = useForm();
   const onSubmit = async (data) => {
     const email = data.email;
-    fetch(`http://localhost:5000/user/admin/${email}`, {
+    fetch(`https://obscure-beyond-94214.herokuapp.com/user/admin/${email}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-      }
-    }).then((res) => {
-      if (res.status === 401 || res.status === 403) {
-        navigate("/login");
-      }
-      return res.json();
+      },
     })
-    .then(data => {
-        if(data.modifiedCount > 0){
-            toast.success('admin added')
-            reset()
+      .then((res) => {
+        if (res.status === 401 || res.status === 403) {
+          navigate("/login");
         }
-        else{
-            toast.error('admin added failed')
+        return res.json();
+      })
+      .then((data) => {
+        if (data.modifiedCount > 0) {
+          toast.success("admin added");
+          reset();
+        } else {
+          toast.error("admin added failed");
         }
-    })
+      });
   };
 
   return (

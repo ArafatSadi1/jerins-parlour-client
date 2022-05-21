@@ -6,7 +6,7 @@ import Loading from "../Shared/Loading";
 const OrderList = () => {
   const navigate = useNavigate();
   const { data: orderList, isLoading } = useQuery("booking", () =>
-    fetch(`http://localhost:5000/booking`, {
+    fetch(`https://obscure-beyond-94214.herokuapp.com/booking`, {
       method: "GET",
       headers: {
         "content-type": "application/json",
@@ -20,7 +20,7 @@ const OrderList = () => {
     })
   );
   if (isLoading) {
-   return <Loading></Loading>
+    return <Loading></Loading>;
   }
 
   return (
@@ -40,7 +40,17 @@ const OrderList = () => {
               <th>{order.displayName ? order.displayName : "No Name"}</th>
               <td>{order.email}</td>
               <td>{order.name}</td>
-              <td>{order.paid ? <span className="btn btn-success btn-sm text-white">Done</span> : <span className="btn btn-error btn-sm text-white">Pending</span> }</td>
+              <td>
+                {order.paid ? (
+                  <span className="btn btn-success btn-sm text-white">
+                    Done
+                  </span>
+                ) : (
+                  <span className="btn btn-error btn-sm text-white">
+                    Pending
+                  </span>
+                )}
+              </td>
             </tr>
           ))}
         </tbody>
