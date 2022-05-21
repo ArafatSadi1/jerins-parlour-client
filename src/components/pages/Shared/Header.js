@@ -5,11 +5,15 @@ import logo from "../../../Image_Icon/logo.png";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
 import useAdmin from "../../hooks/useAdmin";
+import Loading from "./Loading";
 
 const Header = () => {
   const activeClassName = "bg-secondary text-white";
   const [user, loading] = useAuthState(auth);
-  const [admin] = useAdmin(user);
+  const [admin, adminLoading] = useAdmin(user);
+  if(loading || adminLoading){
+    return <Loading></Loading>
+  }
   const navbarItems = (
     <>
       <li>
@@ -56,7 +60,7 @@ const Header = () => {
           </NavLink>
         </li>
       )}
-      {admin && (
+      {(admin && user) && (
         <li>
           <NavLink
             className={({ isActive }) =>

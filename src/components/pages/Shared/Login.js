@@ -104,29 +104,23 @@ const Login = () => {
           <input
             type="submit"
             className="btn btn-secondary"
-            value="Create an account"
+            value="Log in"
           />
           <p className="text-sm mt-2 text-center">
-            Already have an account?
-            <Link className="text-secondary" to="/login">
-              Log in
+            Need an account?
+            <Link className="text-secondary" to="/signup">
+              Sign up
             </Link>
           </p>
         </form>
         <p className="text-error text-sm my-4">{GError?.message}</p>
         <button
           onClick={() => signInWithGoogle()}
-          class="btn btn-outline  rounded-full pr-12"
+          class="btn btn-outline rounded-full w-full pr-20"
         >
-          <img className="mr-12" width={30} src={google} alt="" /> Continue With
+          <img className="mr-20" width={30} src={google} alt="" /> Continue With
           Google
         </button>
-        <p className="text-sm mt-2">
-          Don't have an account?{" "}
-          <Link className="text-secondary" to="/signup">
-            Create an account
-          </Link>
-        </p>
       </div>
     </div>
   );
