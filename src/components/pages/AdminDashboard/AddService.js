@@ -12,7 +12,7 @@ const AddService = () => {
     reset,
   } = useForm();
 
-  const imageStorageKey = "01c5f0cbdef5547fd5171cf1120bc83b";
+  const imageStorageKey = "242a7e72e9896985441314dfce198365";
   const onSubmit = async (data) => {
     setLoading(true);
     const image = data.image[0];

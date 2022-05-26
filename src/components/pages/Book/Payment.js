@@ -47,7 +47,7 @@ const Payment = () => {
       <div className="max-w-xs mx-auto mt-2">
         <label className="mb-2">
           <span className="text-sm">
-            Your Service Charge Will be{" "}
+            Your Service Charge Will be
             <span className="text-secondary font-semibold">${book?.price}</span>
           </span>
         </label>

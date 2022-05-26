@@ -9,7 +9,7 @@ import Loading from "./Loading";
 
 const SignUp = () => {
   const [createUserWithEmailAndPassword, signupUser, signupLoading, signupError] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [signInWithGoogle, GUser, GLoading, GError] = useSignInWithGoogle(auth);
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const [token] = useToken(GUser || signupUser)
