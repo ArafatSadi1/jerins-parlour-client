@@ -2,7 +2,7 @@ import React from "react";
 import ContactUs from "../ContactUs/ContactUs";
 import Footer from "../Shared/Footer";
 import HomeBanner from "./HomeBanner";
-import ScreenCare from "./ScreenCare";
+import ScreenCare from "./SkinCare";
 import Services from "./Services";
 import Testimonials from "./Testimonials";
 
