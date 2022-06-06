@@ -18,7 +18,7 @@ const Services = () => {
       <h2 className="text-3xl text-center font-bold mb-12">
         Our Awesome <span className="text-secondary">Services</span>
       </h2>
-      <div className="flex flex-col lg:flex-row gap-4">
+      <div className="flex flex-col lg:flex-row gap-6">
         {services.slice(0, 3).map((service) => (
           <Service key={service._id} service={service}></Service>
         ))}

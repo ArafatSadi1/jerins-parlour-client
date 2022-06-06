@@ -36,7 +36,7 @@ const Service = ({ service }) => {
         scale: 1.1,
         transition: { duration: 0.5 },
       }}
-      class="card lg:w-1/3 bg-base-100 shadow-xl hover:z-20"
+      class="card lg:w-1/3 bg-pink-50 shadow-xl hover:z-20"
     >
       <figure class="p-8 pb-1">
         <img width={72} src={picture} alt="Shoes" class="rounded-xl" />
