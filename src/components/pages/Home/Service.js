@@ -23,8 +23,8 @@ const Service = ({ service }) => {
       displayName: user.displayName,
     };
     axios.post("http://localhost:5000/booking", booking).then((data) => {
-      if (data.insertedId > 0) {
-        toast("Service added");
+      if (data?.data?.acknowledged) {
+        toast.success("Service added");
       }
     });
   };

@@ -21,6 +21,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import OurPortfolio from './components/pages/OurPortfolio/OurPortfolio';
+import OurTeam from './components/pages/OurTeam/OurTeam';
 
 
 
@@ -29,13 +31,15 @@ function App() {
     AOS.init();
   }, []);
   return (
-    <div>
+    <div className='max-w-[1300px] mx-auto'>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/signup' element={<SignUp/>}></Route>
         <Route path='/contactUs' element={<ContactUs/>}></Route>
+        <Route path='/ourPortfolio' element={<OurPortfolio/>}></Route>
+        <Route path='/ourTeam' element={<OurTeam/>}></Route>
         <Route path='/book' element={<RequireAuth><Book/></RequireAuth>}>
           <Route path='payment/:id' element={<Payment/>}></Route>
           <Route path='bookingList' element={<BookingList/>}></Route>

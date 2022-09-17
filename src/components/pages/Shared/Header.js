@@ -27,7 +27,7 @@ const Header = () => {
       <li>
         <NavLink
           className={({ isActive }) => (isActive ? activeClassName : undefined)}
-          to="/outPortfolio"
+          to="/ourPortfolio"
         >
           Our Portfolio
         </NavLink>
@@ -76,7 +76,7 @@ const Header = () => {
         {user ? (
           <button
             onClick={() => signOut(auth)}
-            className="btn btn-secondary text-white"
+            className="btn btn-outline btn-secondary text-white"
           >
             Sign Out
           </button>
@@ -94,7 +94,7 @@ const Header = () => {
     </>
   );
   return (
-    <div class="navbar bg-pink-50 sticky top-0 z-50 py-4 lg:px-8">
+    <div class="navbar bg-pink-50 sticky top-0 z-50 py-4 lg:px-8 shadow">
       <div class="navbar-start">
         <div class="dropdown ">
           <label tabindex="0" class="btn btn-ghost lg:hidden">
