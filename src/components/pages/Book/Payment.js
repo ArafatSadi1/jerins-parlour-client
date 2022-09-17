@@ -16,9 +16,7 @@ const Payment = () => {
   const { id } = useParams();
   const [user, loading] = useAuthState(auth);
   const { data: book, isLoading } = useQuery("payment", () =>
-    fetch(`https://obscure-beyond-94214.herokuapp.com/payment/${id}`).then(
-      (res) => res.json()
-    )
+    fetch(`http://localhost:5000/payment/${id}`).then((res) => res.json())
   );
   if (loading || isLoading) {
     return <Loading></Loading>;

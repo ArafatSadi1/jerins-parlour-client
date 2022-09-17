@@ -32,7 +32,7 @@ const AddService = () => {
           about: data.description,
           price: data.price,
         };
-        fetch("https://obscure-beyond-94214.herokuapp.com/services", {
+        fetch("http://localhost:5000/services", {
           method: "POST",
           headers: {
             "content-type": "application/json",

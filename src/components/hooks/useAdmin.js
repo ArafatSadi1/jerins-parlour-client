@@ -1,30 +1,17 @@
 import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useQuery } from "react-query";
 
 const useAdmin = (user) => {
-  const [admin, setAdmin] = useState(false);
-  const [adminLoading, setAdminLoading] = useState(true);
+  const { data: admin, isLoading } = useQuery("admin", () =>
+    fetch(`http://localhost:5000/admin/${user?.email}`, {
+      method: "GET",
+      headers: {
+        "content-type": "application/json",
+      },
+    }).then((res) => res.json())
+  );
 
-  useEffect(() => {
-    const email = user?.email;
-    if (email) {
-      fetch(`https://obscure-beyond-94214.herokuapp.com/admin/${email}`, {
-        method: "GET",
-        headers: {
-          "content-type": "application/json",
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          setAdmin(data.admin);
-          setAdminLoading(false);
-        });
-    }
-  }, [user]);
-
-  return [admin, adminLoading];
+  return { admin, isLoading };
 };
 
 export default useAdmin;

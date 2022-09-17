@@ -8,16 +8,16 @@ import Loading from "../pages/Shared/Loading";
 
 const RequireAdmin = ({ children }) => {
   const [user, loading] = useAuthState(auth);
-  const [admin, adminLoading] = useAdmin(user);
+  const { admin, isLoading } = useAdmin(user);
   const location = useLocation();
 
-  if(loading || adminLoading){
-      return <Loading></Loading>;
+  if (loading || isLoading) {
+    return <Loading></Loading>;
   }
 
-  if(!user || !admin){
-      signOut(auth);
-      return <Navigate to="/login" state={{from: location}} replace></Navigate>
+  if (!user || !admin) {
+    signOut(auth);
+    return <Navigate to="/login" state={{ from: location }} replace></Navigate>;
   }
   return children;
 };

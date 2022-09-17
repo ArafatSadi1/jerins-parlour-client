@@ -5,9 +5,7 @@ import Loading from "../Shared/Loading";
 
 const Services = () => {
   const { data: services, isLoading } = useQuery("services", () =>
-    fetch("https://obscure-beyond-94214.herokuapp.com/services").then((res) =>
-      res.json()
-    )
+    fetch("http://localhost:5000/services").then((res) => res.json())
   );
 
   if (isLoading) {
@@ -19,8 +17,8 @@ const Services = () => {
         Our Awesome <span className="text-secondary">Services</span>
       </h2>
       <div className="flex flex-col lg:flex-row gap-6">
-        {services.slice(0, 3).map((service) => (
-          <Service key={service._id} service={service}></Service>
+        {services?.slice(0, 3).map((service) => (
+          <Service key={service?._id} service={service}></Service>
         ))}
       </div>
       <div className="text-center my-8">

@@ -10,7 +10,7 @@ const BookingList = () => {
   const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
   const { data: bookedItems, isLoading } = useQuery("booking", () =>
-    fetch(`https://obscure-beyond-94214.herokuapp.com/booking/${user.email}`, {
+    fetch(`http://localhost:5000/booking/${user.email}`, {
       method: "GET",
       headers: {
         "content-type": "application/json",

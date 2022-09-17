@@ -13,7 +13,7 @@ const MakeAdmin = () => {
   } = useForm();
   const onSubmit = async (data) => {
     const email = data.email;
-    fetch(`https://obscure-beyond-94214.herokuapp.com/user/admin/${email}`, {
+    fetch(`http://localhost:5000/user/admin/${email}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
@@ -27,7 +27,7 @@ const MakeAdmin = () => {
         return res.json();
       })
       .then((data) => {
-        console.log(data)
+        console.log(data);
         if (data.modifiedCount > 0) {
           toast.success("admin added");
           reset();

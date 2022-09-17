@@ -6,7 +6,7 @@ import Loading from "../Shared/Loading";
 const OrderList = () => {
   const navigate = useNavigate();
   const { data: orderList, isLoading } = useQuery("booking", () =>
-    fetch(`https://obscure-beyond-94214.herokuapp.com/booking`, {
+    fetch(`http://localhost:5000/booking`, {
       method: "GET",
       headers: {
         "content-type": "application/json",

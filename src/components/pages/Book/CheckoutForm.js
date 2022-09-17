@@ -14,7 +14,7 @@ const CheckoutForm = ({ book }) => {
   const { name, price, picture, about, email, _id, displayName } = book;
 
   useEffect(() => {
-    fetch("https://obscure-beyond-94214.herokuapp.com/create-payment-intent", {
+    fetch("http://localhost:5000/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -79,7 +79,7 @@ const CheckoutForm = ({ book }) => {
         displayName: displayName,
         email: email,
       };
-      fetch(`https://obscure-beyond-94214.herokuapp.com/booking/${_id}`, {
+      fetch(`http://localhost:5000/booking/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",

@@ -10,9 +10,9 @@ import Loading from "./Loading";
 const Header = () => {
   const activeClassName = "bg-secondary text-white";
   const [user, loading] = useAuthState(auth);
-  const [admin, adminLoading] = useAdmin(user);
-  if(loading || adminLoading){
-    return <Loading></Loading>
+  const { admin, isLoading } = useAdmin(user);
+  if (loading || isLoading) {
+    return <Loading></Loading>;
   }
   const navbarItems = (
     <>
@@ -60,7 +60,7 @@ const Header = () => {
           </NavLink>
         </li>
       )}
-      {(admin && user) && (
+      {user && admin && (
         <li>
           <NavLink
             className={({ isActive }) =>
