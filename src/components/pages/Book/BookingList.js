@@ -9,8 +9,12 @@ import Loading from "../Shared/Loading";
 const BookingList = () => {
   const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
-  const { data: bookedItems, isLoading, refetch } = useQuery("booking", () =>
-    fetch(`http://localhost:5000/booking/${user.email}`, {
+  const {
+    data: bookedItems,
+    isLoading,
+    refetch,
+  } = useQuery("booking", () =>
+    fetch(`https://jerins-parlour.onrender.com/booking/${user.email}`, {
       method: "GET",
       headers: {
         "content-type": "application/json",

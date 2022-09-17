@@ -48,6 +48,7 @@ const Login = () => {
             class="input input-bordered"
             type="email"
             placeholder="Email"
+            defaultValue="admin@gmail.com"
             {...register("email", {
               required: {
                 value: true,
@@ -76,6 +77,7 @@ const Login = () => {
             class="input input-bordered"
             placeholder="Password"
             type="password"
+            defaultValue="123456"
             {...register("password", {
               required: {
                 value: true,

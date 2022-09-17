@@ -13,7 +13,7 @@ const MakeAdmin = () => {
   } = useForm();
   const onSubmit = async (data) => {
     const email = data.email;
-    fetch(`http://localhost:5000/user/admin/${email}`, {
+    fetch(`https://jerins-parlour.onrender.com/user/admin/${email}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

@@ -22,11 +22,13 @@ const Service = ({ service }) => {
       email: email,
       displayName: user.displayName,
     };
-    axios.post("http://localhost:5000/booking", booking).then((data) => {
-      if (data?.data?.acknowledged) {
-        toast.success("Service added");
-      }
-    });
+    axios
+      .post("https://jerins-parlour.onrender.com/booking", booking)
+      .then((data) => {
+        if (data?.data?.acknowledged) {
+          toast.success("Service added");
+        }
+      });
   };
   return (
     <motion.div

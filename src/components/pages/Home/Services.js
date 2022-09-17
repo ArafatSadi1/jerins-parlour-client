@@ -5,14 +5,16 @@ import Loading from "../Shared/Loading";
 
 const Services = () => {
   const { data: services, isLoading } = useQuery("services", () =>
-    fetch("http://localhost:5000/services").then((res) => res.json())
+    fetch("https://jerins-parlour.onrender.com/services").then((res) =>
+      res.json()
+    )
   );
 
   if (isLoading) {
     return <Loading></Loading>;
   }
   return (
-    <div className="lg:px-12 my-12">
+    <div className="lg:px-8 my-12">
       <h2 className="text-3xl text-center font-bold mb-12">
         Our Awesome <span className="text-secondary">Services</span>
       </h2>

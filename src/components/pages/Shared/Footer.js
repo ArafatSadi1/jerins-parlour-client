@@ -3,7 +3,7 @@ import locationIcon from "../../../Image_Icon/Icon/map-pin-2-fill.png"
 
 const Footer = () => {
   return (
-    <footer class="footer p-10 bg-secondary text-white">
+    <footer class="footer p-8 bg-secondary text-white">
       <div className="flex items-center w-80">
         <img width={30} src={locationIcon} alt="" />
         <p>

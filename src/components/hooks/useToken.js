@@ -8,7 +8,7 @@ const useToken = (user) => {
     const email = user?.user?.email;
     if (email) {
       const currentUser = { email: email };
-      const url = `http://localhost:5000/user/${email}`;
+      const url = `https://jerins-parlour.onrender.com/user/${email}`;
       fetch(url, {
         method: "PUT",
         headers: {

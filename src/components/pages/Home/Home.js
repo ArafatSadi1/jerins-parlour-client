@@ -9,12 +9,12 @@ import Testimonials from "./Testimonials";
 const Home = () => {
   return (
     <div>
-     <HomeBanner></HomeBanner>
-     <Services></Services>
-     <ScreenCare></ScreenCare>
-     <Testimonials></Testimonials>
-     <ContactUs></ContactUs>
-     <Footer></Footer>
+      <HomeBanner></HomeBanner>
+      <Services></Services>
+      <ScreenCare></ScreenCare>
+      <Testimonials></Testimonials>
+      <ContactUs></ContactUs>
+      <Footer></Footer>
     </div>
   );
 };

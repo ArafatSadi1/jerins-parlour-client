@@ -14,7 +14,7 @@ const CheckoutForm = ({ book }) => {
   const { name, price, picture, about, email, _id, displayName } = book;
 
   useEffect(() => {
-    fetch("http://localhost:5000/create-payment-intent", {
+    fetch("https://jerins-parlour.onrender.com/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -79,15 +79,14 @@ const CheckoutForm = ({ book }) => {
         displayName: displayName,
         email: email,
       };
-      fetch(`http://localhost:5000/booking/${_id}`, {
+      fetch(`https://jerins-parlour.onrender.com/booking/${_id}`, {
         method: "PATCH",
         headers: {
           "content-type": "application/json",
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
         body: JSON.stringify(booking),
-      })
-        .then((res) => res.json())
+      }).then((res) => res.json());
     }
   };
   return (

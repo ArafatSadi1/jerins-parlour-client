@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 
 const useAdmin = (user) => {
   const { data: admin, isLoading } = useQuery("admin", () =>
-    fetch(`http://localhost:5000/admin/${user?.email}`, {
+    fetch(`https://jerins-parlour.onrender.com/admin/${user?.email}`, {
       method: "GET",
       headers: {
         "content-type": "application/json",

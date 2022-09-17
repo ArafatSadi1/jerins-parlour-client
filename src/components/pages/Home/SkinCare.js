@@ -4,8 +4,8 @@ import skinCare from "../../../Image_Icon/Image/sreencare.png";
 const ScreenCare = () => {
   return (
     <div class="hero lg:h-[70vh] bg-pink-50">
-      <div class="hero-content flex-col lg:flex-row gap-20 lg:px-32">
-        <img src={skinCare} class="max-w-sm rounded-lg shadow-2xl" alt="" />
+      <div class="hero-content grid grid-cols-2 lg:px-8">
+        <div className="flex justify-start"><img src={skinCare} class="max-w-sm rounded-lg shadow-2xl" alt="" /></div>
         <div className="pr-20">
           <h1 class="text-4xl font-bold">Let us handle your screen</h1>
           <h1 class="text-4xl font-bold">

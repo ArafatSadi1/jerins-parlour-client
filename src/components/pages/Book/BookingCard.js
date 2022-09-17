@@ -7,12 +7,14 @@ const BookingCard = ({ bookedItem, refetch }) => {
   const { _id, picture, name, price, about, paid } = bookedItem;
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:5000/booked/${id}`).then((res) => {
-      if (res.data.acknowledged) {
-        toast.error("Delete Successful");
-        refetch();
-      }
-    });
+    axios
+      .delete(`https://jerins-parlour.onrender.com/booked/${id}`)
+      .then((res) => {
+        if (res.data.acknowledged) {
+          toast.error("Delete Successful");
+          refetch();
+        }
+      });
   };
   return (
     <div class="card bg-base-100 shadow-xl">
