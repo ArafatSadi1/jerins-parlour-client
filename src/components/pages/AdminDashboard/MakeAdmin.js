@@ -27,7 +27,6 @@ const MakeAdmin = () => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         if (data.modifiedCount > 0) {
           toast.success("admin added");
           reset();

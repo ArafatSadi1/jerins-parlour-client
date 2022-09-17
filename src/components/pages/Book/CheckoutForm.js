@@ -56,7 +56,7 @@ const CheckoutForm = ({ book }) => {
         payment_method: {
           card: card,
           billing_details: {
-            displayName: displayName,
+            name: displayName,
             email: email,
           },
         },
@@ -88,9 +88,6 @@ const CheckoutForm = ({ book }) => {
         body: JSON.stringify(booking),
       })
         .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-        });
     }
   };
   return (

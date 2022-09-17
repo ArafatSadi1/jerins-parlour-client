@@ -9,7 +9,7 @@ import Loading from "../Shared/Loading";
 const BookingList = () => {
   const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
-  const { data: bookedItems, isLoading } = useQuery("booking", () =>
+  const { data: bookedItems, isLoading, refetch } = useQuery("booking", () =>
     fetch(`http://localhost:5000/booking/${user.email}`, {
       method: "GET",
       headers: {
@@ -33,6 +33,7 @@ const BookingList = () => {
           <BookingCard
             key={bookedItem._id}
             bookedItem={bookedItem}
+            refetch={refetch}
           ></BookingCard>
         ))}
       </div>
