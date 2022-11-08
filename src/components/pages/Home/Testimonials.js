@@ -33,7 +33,7 @@ const Testimonials = () => {
         ];
     
     return (
-        <div className='my-12 lg:px-8'>
+        <div className='pt-20 pb-16 lg:px-8'>
             <h2 className='text-3xl text-center font-bold mb-12'>Testimonials</h2>
             <div className='flex flex-col lg:flex-row gap-12 lg:mx-12'>
                 {

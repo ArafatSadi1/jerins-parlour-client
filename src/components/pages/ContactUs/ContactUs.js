@@ -5,10 +5,10 @@ const ContactUs = () => {
     e.preventDefault();
   };
   return (
-    <div className="bg-pink-50 p-8">
-      <h2 className="text-3xl mx-auto font-bold my-12 lg:w-1/3">
+    <div className="pt-20 pb-16 bg-pink-50">
+      <h2 className="text-4xl text-center mx-auto font-bold mb-12 lg:w-2/5 leading-[50px]">
         Let us handle your project,
-        <span className="text-secondary">professionally.</span>
+        <span className="ml-1 text-secondary">professionally.</span>
       </h2>
       <form
         onSubmit={handleContact}
@@ -35,7 +35,7 @@ const ContactUs = () => {
           placeholder="Your Message"
         ></textarea>
         <input
-          className="btn btn-secondary my-3"
+          className="mt-6 py-2 px-4 bg-secondary rounded text-lg text-white hover:bg-[#d400a2] duration-300"
           type="submit"
           value="Send Message"
         />

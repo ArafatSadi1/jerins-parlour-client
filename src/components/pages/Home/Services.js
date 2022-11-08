@@ -15,10 +15,10 @@ const Services = () => {
   }
   return (
     <div className="lg:px-8 pt-20">
-      <h2 className="text-3xl text-center font-bold mb-12">
+      <h2 className="text-4xl text-center font-bold mb-12">
         Our Awesome <span className="text-secondary">Services</span>
       </h2>
-      <div className="flex flex-col lg:flex-row gap-8">
+      <div className="flex flex-col lg:flex-row gap-10">
         {services?.slice(0, 3).map((service) => (
           <Service key={service?._id} service={service}></Service>
         ))}

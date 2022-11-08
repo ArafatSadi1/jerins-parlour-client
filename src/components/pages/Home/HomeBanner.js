@@ -22,7 +22,7 @@ const HomeBanner = () => {
           <div className="flex justify-end">
             <img
               src={bannerImg}
-              className="w-[55%] rounded shadow-2xl"
+              className="w-[75%] rounded shadow-2xl"
               alt=""
             />
           </div>

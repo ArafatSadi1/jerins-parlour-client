@@ -30,14 +30,14 @@ const Service = ({ service }) => {
       });
   };
   return (
-    <div className="p-8 bg-pink-50 rounded shadow-xl">
+    <div className="px-6 py-8 bg-pink-50 rounded shadow-xl">
       <div className="flex justify-center">
         <img src={picture} alt="" className="w-[72px]" />
       </div>
       <div className="mt-6 items-center text-center">
-        <h2 className="text-lg font-semibold">{name}</h2>
-        <p className="text-secondary font-bold my-2">${price}</p>
-        <p>{about}</p>
+        <h2 className="text-2xl font-semibold">{name}</h2>
+        <p className="text-lg text-secondary font-bold my-2">${price}</p>
+        <p className="text-lg">{about}</p>
         <div className="mt-8">
           <button
             onClick={() => handleBook(user.email)}
