@@ -1,26 +1,22 @@
 import React from "react";
 
 const AddReview = () => {
-  const handleAddReview = e =>{
-    e.preventDefault()
-  }
+  const handleAddReview = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="m-8">
-      <form onSubmit={handleAddReview} className="flex flex-col gap-3 lg:w-2/3" action="">
-        <input
-          type="text"
-          placeholder="Type here"
-          class="input w-full"
-        />
-        <input
-          type="text"
-          placeholder="Type here"
-          class="input w-full"
-        />
+      <form
+        onSubmit={handleAddReview}
+        className="flex flex-col gap-3 lg:w-2/3"
+        action=""
+      >
+        <input type="text" placeholder="Type here" className="input w-full" />
+        <input type="text" placeholder="Type here" className="input w-full" />
         <textarea
           type="text"
           placeholder="Type here"
-          class="textarea w-full"
+          className="textarea w-full"
         />
         <input
           type="submit"

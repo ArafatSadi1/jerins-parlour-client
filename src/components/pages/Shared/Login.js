@@ -45,7 +45,7 @@ const Login = () => {
         <h4 className="text-2xl font-bold mt-16 mb-6">Login</h4>
         <form onSubmit={handleSubmit(onSubmit)} className="form-control">
           <input
-            class="input input-bordered"
+            className="input input-bordered"
             type="email"
             placeholder="Email"
             defaultValue="admin@gmail.com"
@@ -60,7 +60,7 @@ const Login = () => {
               },
             })}
           />
-          <label class="label">
+          <label className="label">
             {errors?.email?.type === "required" && (
               <span className="label-text-alt text-error">
                 {errors.email.message}
@@ -74,7 +74,7 @@ const Login = () => {
           </label>
 
           <input
-            class="input input-bordered"
+            className="input input-bordered"
             placeholder="Password"
             type="password"
             defaultValue="123456"
@@ -89,7 +89,7 @@ const Login = () => {
               },
             })}
           />
-          <label class="label">
+          <label className="label">
             {errors?.password?.type === "required" && (
               <span className="label-text-alt text-error">
                 {errors.password.message}
@@ -103,11 +103,7 @@ const Login = () => {
           </label>
 
           <p className="text-error text-sm">{error?.message}</p>
-          <input
-            type="submit"
-            className="btn btn-secondary"
-            value="Log in"
-          />
+          <input type="submit" className="btn btn-secondary" value="Log in" />
           <p className="text-sm mt-2 text-center">
             Need an account?
             <Link className="text-secondary" to="/signup">
@@ -118,7 +114,7 @@ const Login = () => {
         <p className="text-error text-sm my-4">{GError?.message}</p>
         <button
           onClick={() => signInWithGoogle()}
-          class="btn btn-outline rounded-full w-full pr-20"
+          className="btn btn-outline rounded-full w-full pr-20"
         >
           <img className="mr-20" width={30} src={google} alt="" /> Continue With
           Google

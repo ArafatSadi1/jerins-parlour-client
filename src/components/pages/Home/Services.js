@@ -14,17 +14,19 @@ const Services = () => {
     return <Loading></Loading>;
   }
   return (
-    <div className="lg:px-8 my-12">
+    <div className="lg:px-8 pt-20">
       <h2 className="text-3xl text-center font-bold mb-12">
         Our Awesome <span className="text-secondary">Services</span>
       </h2>
-      <div className="flex flex-col lg:flex-row gap-6">
+      <div className="flex flex-col lg:flex-row gap-8">
         {services?.slice(0, 3).map((service) => (
           <Service key={service?._id} service={service}></Service>
         ))}
       </div>
-      <div className="text-center my-8">
-        <button class="btn btn-secondary">Explore More</button>
+      <div className="text-center pt-16">
+        <button className="py-2 px-4 bg-secondary rounded text-lg text-white hover:bg-[#d400a2] duration-300">
+          Explore More
+        </button>
       </div>
     </div>
   );

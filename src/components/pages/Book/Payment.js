@@ -29,19 +29,19 @@ const Payment = () => {
         <input
           type="text"
           value={user.displayName}
-          class="input w-full max-w-xs"
+          className="input w-full max-w-xs"
         />
         <input
           type="email"
           value={user.email}
           readOnly
-          class="input w-full max-w-xs"
+          className="input w-full max-w-xs"
         />
         <input
           type="email"
           value={book?.name}
           readOnly
-          class="input w-full max-w-xs"
+          className="input w-full max-w-xs"
         />
       </div>
       <div className="max-w-xs mx-auto mt-2">

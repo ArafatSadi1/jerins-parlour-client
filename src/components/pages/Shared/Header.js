@@ -8,7 +8,7 @@ import useAdmin from "../../hooks/useAdmin";
 import Loading from "./Loading";
 
 const Header = () => {
-  const activeClassName = "bg-secondary text-white";
+  const activeClassName = "text-lg border-b-2 border-secondary pb-2";
   const [user, loading] = useAuthState(auth);
   const { admin, isLoading } = useAdmin(user);
   if (loading || isLoading) {
@@ -18,7 +18,7 @@ const Header = () => {
     <>
       <li>
         <NavLink
-          className={({ isActive }) => (isActive ? activeClassName : undefined)}
+          className={({ isActive }) => (isActive ? activeClassName : "text-lg")}
           to="/"
         >
           Home
@@ -26,23 +26,7 @@ const Header = () => {
       </li>
       <li>
         <NavLink
-          className={({ isActive }) => (isActive ? activeClassName : undefined)}
-          to="/ourPortfolio"
-        >
-          Our Portfolio
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={({ isActive }) => (isActive ? activeClassName : undefined)}
-          to="/ourTeam"
-        >
-          Our Team
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={({ isActive }) => (isActive ? activeClassName : undefined)}
+          className={({ isActive }) => (isActive ? activeClassName : "text-lg")}
           to="/contactUs"
         >
           Contact Us
@@ -52,11 +36,11 @@ const Header = () => {
         <li>
           <NavLink
             className={({ isActive }) =>
-              isActive ? activeClassName : undefined
+              isActive ? activeClassName : "text-lg"
             }
             to="/book/bookingList"
           >
-            Book
+            Booked
           </NavLink>
         </li>
       )}
@@ -64,7 +48,7 @@ const Header = () => {
         <li>
           <NavLink
             className={({ isActive }) =>
-              isActive ? activeClassName : undefined
+              isActive ? activeClassName : "text-lg"
             }
             to="/dashboard/orderList"
           >
@@ -76,15 +60,13 @@ const Header = () => {
         {user ? (
           <button
             onClick={() => signOut(auth)}
-            className="btn btn-outline btn-secondary text-white"
+            className="py-2 px-4 bg-secondary rounded text-lg text-white hover:bg-[#d400a2] duration-300"
           >
             Sign Out
           </button>
         ) : (
           <NavLink
-            className={({ isActive }) =>
-              isActive ? activeClassName : undefined
-            }
+            className="py-2 px-4 rounded border border-primary text-lg hover:bg-primary hover:text-white duration-300"
             to="/login"
           >
             Login
@@ -94,28 +76,28 @@ const Header = () => {
     </>
   );
   return (
-    <div class="navbar bg-pink-50 sticky top-0 z-50 py-4 shadow">
-      <div class="navbar-start">
-        <div class="dropdown ">
-          <label tabindex="0" class="btn btn-ghost lg:hidden">
+    <div className="navbar bg-pink-50 sticky top-0 z-50 py-4 shadow">
+      <div className="navbar-start">
+        <div className="dropdown ">
+          <label tabIndex="0" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
+              className="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 6h16M4 12h8m-8 6h16"
               />
             </svg>
           </label>
           <ul
-            tabindex="0"
-            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 gap-2"
+            tabIndex="0"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 gap-2"
           >
             {navbarItems}
           </ul>
@@ -125,24 +107,27 @@ const Header = () => {
           <img width={130} src={logo} alt="" />
         </Link>
       </div>
-      <label for="booking-sidebar" class="btn btn-ghost lg:hidden navbar-end">
+      <label
+        htmlFor="booking-sidebar"
+        className="btn btn-ghost lg:hidden navbar-end"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
+          className="h-5 w-5"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="M4 6h16M4 12h8m-8 6h16"
           />
         </svg>
       </label>
-      <div class="navbar-end w-4/5 hidden lg:flex">
-        <ul class="menu menu-horizontal p-0 gap-2">{navbarItems}</ul>
+      <div className="navbar-end w-4/5 hidden lg:flex">
+        <ul className="menu-horizontal p-0 gap-8 pr-4 items-center">{navbarItems}</ul>
       </div>
     </div>
   );

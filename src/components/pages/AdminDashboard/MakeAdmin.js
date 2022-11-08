@@ -43,13 +43,13 @@ const MakeAdmin = () => {
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="lg:w-2/5 w-4/5">
-          <label class="label">
-            <span class="label-text font-semibold">Enter Email</span>
+          <label className="label">
+            <span className="label-text font-semibold">Enter Email</span>
           </label>
           <input
             type="email"
             placeholder="Enter Existing User Email"
-            class="input input-bordered w-full text-lg"
+            className="input input-bordered w-full text-lg"
             {...register("email", {
               required: {
                 value: true,

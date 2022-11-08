@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import auth from "../../../firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
 import axios from "axios";
 import Loading from "../Shared/Loading";
 import { toast } from "react-toastify";
-import { motion } from "framer-motion";
 
 const Service = ({ service }) => {
   const { picture, name, price, about } = service;
@@ -26,33 +25,29 @@ const Service = ({ service }) => {
       .post("https://jerins-parlour.onrender.com/booking", booking)
       .then((data) => {
         if (data?.data?.acknowledged) {
-          toast.success("Service added");
+          toast.success("Service booked. Thank you");
         }
       });
   };
   return (
-    <motion.div
-      whileHover={{
-        scale: 1.1,
-        transition: { duration: 0.5 },
-      }}
-      class="card lg:w-1/3 bg-pink-50 shadow-xl hover:z-20"
-    >
-      <figure class="p-8 pb-1">
-        <img width={72} src={picture} alt="Shoes" class="rounded-xl" />
-      </figure>
-      <div class="card-body items-center text-center">
-        <h2 class="card-title font-semibold">{name}</h2>
-        <p className="text-secondary font-bold">${price}</p>
-        <p>{about}</p>
-        <button
-          onClick={() => handleBook(user.email)}
-          className="btn btn-outline btn-secondary"
-        >
-          Book Now
-        </button>
+    <div className="p-8 bg-pink-50 rounded shadow-xl">
+      <div className="flex justify-center">
+        <img src={picture} alt="" className="w-[72px]" />
       </div>
-    </motion.div>
+      <div className="mt-6 items-center text-center">
+        <h2 className="text-lg font-semibold">{name}</h2>
+        <p className="text-secondary font-bold my-2">${price}</p>
+        <p>{about}</p>
+        <div className="mt-8">
+          <button
+            onClick={() => handleBook(user.email)}
+            className="py-2 px-4 border border-secondary rounded text-lg text-secondary hover:bg-secondary hover:text-white duration-300"
+          >
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 

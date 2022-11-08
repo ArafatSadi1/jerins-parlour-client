@@ -62,13 +62,13 @@ const AddService = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="p-4 bg-base-100 grid grid-cols-1 lg:grid-cols-2">
           <div>
-            <label class="label">
-              <span class="label-text font-semibold">Service Title</span>
+            <label className="label">
+              <span className="label-text font-semibold">Service Title</span>
             </label>
             <input
               type="text"
               placeholder="Enter Title"
-              class="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-full max-w-xs"
               {...register("title", {
                 required: {
                   value: true,
@@ -86,13 +86,13 @@ const AddService = () => {
           </div>
 
           <div>
-            <label class="label">
-              <span class="label-text font-semibold">Price</span>
+            <label className="label">
+              <span className="label-text font-semibold">Price</span>
             </label>
             <input
               type="number"
               placeholder="$Price"
-              class="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-full max-w-xs"
               {...register("price", {
                 required: {
                   value: true,
@@ -110,11 +110,11 @@ const AddService = () => {
           </div>
 
           <div>
-            <label class="label">
-              <span class="label-text font-semibold">Description</span>
+            <label className="label">
+              <span className="label-text font-semibold">Description</span>
             </label>
             <textarea
-              class="textarea textarea-bordered w-full max-w-xs"
+              className="textarea textarea-bordered w-full max-w-xs"
               placeholder="Enter Description"
               {...register("description", {
                 required: {
@@ -133,12 +133,12 @@ const AddService = () => {
           </div>
 
           <div>
-            <label class="label">
-              <span class="label-text font-semibold">Image</span>
+            <label className="label">
+              <span className="label-text font-semibold">Image</span>
             </label>
             <input
               type="file"
-              class="input pl-0 w-full max-w-xs"
+              className="input pl-0 w-full max-w-xs"
               {...register("image", {
                 required: {
                   value: true,

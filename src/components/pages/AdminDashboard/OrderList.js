@@ -24,8 +24,8 @@ const OrderList = () => {
   }
 
   return (
-    <div class="overflow-x-auto m-8">
-      <table class="table w-full">
+    <div className="overflow-x-auto m-8">
+      <table className="table w-full">
         <thead>
           <tr>
             <th>Name</th>

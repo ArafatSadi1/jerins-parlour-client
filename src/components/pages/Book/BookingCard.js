@@ -17,9 +17,9 @@ const BookingCard = ({ bookedItem, refetch }) => {
       });
   };
   return (
-    <div class="card bg-base-100 shadow-xl">
+    <div className="card bg-base-100 shadow-xl">
       <div className="flex justify-between items-center pt-4 px-8">
-        <img width={72} src={picture} alt="Shoes" class="rounded-xl" />
+        <img width={72} src={picture} alt="Shoes" className="rounded-xl" />
         {paid ? (
           <span className="btn btn-sm btn-success text-white">Paid</span>
         ) : (
@@ -39,8 +39,8 @@ const BookingCard = ({ bookedItem, refetch }) => {
           </div>
         )}
       </div>
-      <div class="card-body">
-        <h2 class="card-title font-semibold">{name}</h2>
+      <div className="card-body">
+        <h2 className="card-title font-semibold">{name}</h2>
         <p>{about}</p>
       </div>
     </div>
