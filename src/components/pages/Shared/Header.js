@@ -18,7 +18,11 @@ const Header = () => {
     <>
       <li>
         <NavLink
-          className={({ isActive }) => (isActive ? activeClassName : "text-lg")}
+          className={({ isActive }) =>
+            isActive
+              ? activeClassName
+              : "pb-2 text-lg hover:border-b-2 hover:border-secondary"
+          }
           to="/"
         >
           Home
@@ -26,7 +30,11 @@ const Header = () => {
       </li>
       <li>
         <NavLink
-          className={({ isActive }) => (isActive ? activeClassName : "text-lg")}
+          className={({ isActive }) =>
+            isActive
+              ? activeClassName
+              : "pb-2 text-lg hover:border-b-2 hover:border-secondary"
+          }
           to="/contactUs"
         >
           Contact Us
@@ -36,7 +44,9 @@ const Header = () => {
         <li>
           <NavLink
             className={({ isActive }) =>
-              isActive ? activeClassName : "text-lg"
+              isActive
+                ? activeClassName
+                : "pb-2 text-lg hover:border-b-2 hover:border-secondary"
             }
             to="/book/bookingList"
           >
@@ -48,7 +58,9 @@ const Header = () => {
         <li>
           <NavLink
             className={({ isActive }) =>
-              isActive ? activeClassName : "text-lg"
+              isActive
+                ? activeClassName
+                : "pb-2 text-lg hover:border-b-2 hover:border-secondary"
             }
             to="/dashboard/orderList"
           >
@@ -127,7 +139,9 @@ const Header = () => {
         </svg>
       </label>
       <div className="navbar-end w-4/5 hidden lg:flex">
-        <ul className="menu-horizontal p-0 gap-8 pr-4 items-center">{navbarItems}</ul>
+        <ul className="menu-horizontal p-0 gap-8 pr-4 items-center">
+          {navbarItems}
+        </ul>
       </div>
     </div>
   );
