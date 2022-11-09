@@ -6,9 +6,6 @@ const Footer = () => {
   return (
     <footer className="footer p-8 bg-secondary text-white">
       <div className="w-80">
-        <div>
-          <img width={130} src={logo} alt="" />
-        </div>
         <div className="flex items-center">
           <img width={30} src={locationIcon} alt="" />
           <p>

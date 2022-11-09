@@ -8,7 +8,7 @@ const ContactUs = () => {
     e.target.reset();
   };
   return (
-    <div className="mt-20 py-16 bg-pink-50">
+    <div className="py-16 bg-pink-50">
       <h2 className="text-4xl text-center mx-auto font-bold mb-12 lg:w-2/5 leading-[50px]">
         Let us handle your project,
         <span className="ml-1 text-secondary">professionally.</span>

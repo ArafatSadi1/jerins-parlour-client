@@ -4,7 +4,7 @@ import cartLogo from "../../../Image_Icon/Icon/Group.png";
 import reviewLogo from "../../../Image_Icon/Icon/Group 1368.png";
 
 const Book = () => {
-  const activeClassName = "bg-secondary text-white";
+  const activeClassName = "flex items-center gap-2 border-r-2 border-secondary";
 
   return (
     <div className="drawer drawer-mobile">
@@ -15,12 +15,12 @@ const Book = () => {
       </div>
       <div className="drawer-side">
         <label htmlFor="booking-sidebar" className="drawer-overlay"></label>
-        <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+        <ul className="p-4 overflow-y-auto w-56 bg-base-100 text-base-content flex flex-col gap-4">
           {/* <!-- Sidebar content here --> */}
           <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? activeClassName : undefined
+                isActive ? activeClassName : "flex items-center gap-2"
               }
               to="bookingList"
             >
@@ -31,7 +31,7 @@ const Book = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? activeClassName : undefined
+                isActive ? activeClassName : "flex items-center gap-2"
               }
               to="addReview"
             >

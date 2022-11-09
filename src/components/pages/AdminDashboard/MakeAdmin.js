@@ -37,41 +37,43 @@ const MakeAdmin = () => {
   };
 
   return (
-    <div className="m-8 bg-base-100 p-4">
+    <div className="m-8 bg-base-100 rounded p-4">
+      <h2 className="text-4xl font-semibold text-center py-4">Make an Admin</h2>
       <form
-        className="flex flex-row items-center"
+        className="mt-4 flex justify-center"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="lg:w-2/5 w-4/5">
           <label className="label">
-            <span className="label-text font-semibold">Enter Email</span>
+            <span className="text-lg font-semibold">Enter Email</span>
           </label>
-          <input
-            type="email"
-            placeholder="Enter Existing User Email"
-            className="input input-bordered w-full text-lg"
-            {...register("email", {
-              required: {
-                value: true,
-                message: "Email is Required",
-              },
-            })}
-          />
+          <div className="flex items-center">
+            <input
+              type="email"
+              placeholder="Enter Existing User Email"
+              className="input input-bordered w-full text-lg focus:outline-none rounded-l rounded-r-none"
+              {...register("email", {
+                required: {
+                  value: true,
+                  message: "Email is Required",
+                },
+              })}
+            />
+            <input
+              type="submit"
+              value="Submit"
+              className="py-[10px] px-4 bg-secondary rounded-r text-lg text-white hover:bg-[#d400a2] duration-300"
+            />
+          </div>
+          <label className="label">
+            {errors.email?.type === "required" && (
+              <span className="label-text-alt text-red-500">
+                {errors.email.message}
+              </span>
+            )}
+          </label>
         </div>
-
-        <input
-          type="submit"
-          value="Submit"
-          className="btn btn-secondary mt-9"
-        />
       </form>
-      <label className="label">
-        {errors.email?.type === "required" && (
-          <span className="label-text-alt text-red-500">
-            {errors.email.message}
-          </span>
-        )}
-      </label>
     </div>
   );
 };

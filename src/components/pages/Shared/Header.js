@@ -11,7 +11,10 @@ const Header = () => {
   const activeClassName = "text-lg border-b-2 border-secondary pb-2";
   const [user, loading] = useAuthState(auth);
   const { admin, isLoading } = useAdmin(user);
-  if (loading || isLoading) {
+  if (isLoading) {
+    return <p className="hidden">Loading</p>;
+  }
+  if (loading) {
     return <Loading></Loading>;
   }
   const navbarItems = (

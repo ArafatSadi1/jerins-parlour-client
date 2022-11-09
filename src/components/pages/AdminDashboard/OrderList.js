@@ -28,15 +28,17 @@ const OrderList = () => {
       <table className="table w-full">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Service</th>
-            <th>Status</th>
+            <th className="text-[14px]">No.</th>
+            <th className="text-[14px]">Name</th>
+            <th className="text-[14px]">Email</th>
+            <th className="text-[14px]">Service</th>
+            <th className="text-[14px]">Status</th>
           </tr>
         </thead>
         <tbody>
-          {orderList.map((order) => (
+          {orderList.map((order, index) => (
             <tr key={order._id}>
+              <th>{index + 1}</th>
               <th>{order.displayName ? order.displayName : "No Name"}</th>
               <td>{order.email}</td>
               <td>{order.name}</td>
