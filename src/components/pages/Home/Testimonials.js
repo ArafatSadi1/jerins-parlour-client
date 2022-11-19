@@ -51,7 +51,7 @@ const Testimonials = () => {
         <Slider {...settings}>
           {reviews?.map((review) => (
             <div>
-              <div className="relative mt-20 w-full text-black ">
+              <div className="relative mt-16 w-full text-black ">
                 <div className="bg-gray-100 h-72 p-10 m-5 border rounded-md shadow-lg">
                   <div className="avatar absolute top-[-45px] left-[45px]">
                     <div className="w-20 border-[3px] border-secondary rounded-full">

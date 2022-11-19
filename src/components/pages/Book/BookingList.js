@@ -5,6 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import BookingCard from "./BookingCard";
 import { useNavigate } from "react-router-dom";
 import Loading from "../Shared/Loading";
+import { signOut } from "firebase/auth";
 
 const BookingList = () => {
   const [user, loading] = useAuthState(auth);
@@ -23,6 +24,7 @@ const BookingList = () => {
     }).then((res) => {
       if (res.status === 401 || res.status === 403) {
         navigate("/login");
+        signOut(auth);
       }
       return res.json();
     })
