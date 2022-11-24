@@ -36,7 +36,7 @@ const Login = () => {
   }
 
   const onSubmit = async (data) => {
-    await signInWithEmailAndPassword(data.email, data.password);
+    await signInWithEmailAndPassword(data?.email, data?.password);
   };
   return (
     <div className="my-12 grid justify-center items-center">

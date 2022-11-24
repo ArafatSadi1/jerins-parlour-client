@@ -33,8 +33,8 @@ const BookingList = () => {
     return <Loading></Loading>;
   }
   return (
-    <div className="p-12 sm:mx-auto">
-      <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-2">
+    <div className="p-8 sm:mx-auto">
+      <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
         {bookedItems?.map((bookedItem) => (
           <BookingCard
             key={bookedItem._id}

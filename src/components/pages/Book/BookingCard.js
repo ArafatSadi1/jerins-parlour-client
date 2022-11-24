@@ -17,22 +17,22 @@ const BookingCard = ({ bookedItem, refetch }) => {
       });
   };
   return (
-    <div className="card bg-base-100 shadow-xl">
+    <div className="bg-base-100 rounded shadow-xl">
       <div className="flex justify-between items-center pt-4 px-8">
         <img width={72} src={picture} alt="Shoes" className="rounded-xl" />
         {paid ? (
-          <span className="btn btn-sm btn-success text-white">Paid</span>
+          <span className="rounded bg-green-500 py-1 px-3 uppercase text-white">Paid</span>
         ) : (
           <div className="flex items-center gap-3">
             <Link
               to={`/book/payment/${_id}`}
-              className="btn btn-sm btn-info text-white"
+              className="rounded bg-info py-1 px-3 uppercase text-white hover:bg-[#0086bf] duration-300"
             >
               Pay
             </Link>
             <button
               onClick={() => handleDelete(_id)}
-              className="btn btn-sm btn-error text-white"
+              className="rounded bg-error py-1 px-3 uppercase text-white hover:bg-[#fe4b4b] duration-300"
             >
               Delete
             </button>

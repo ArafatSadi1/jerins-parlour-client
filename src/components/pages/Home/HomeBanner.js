@@ -4,7 +4,7 @@ import bannerImg from "../../../Image_Icon/Image/banner-img.png";
 const HomeBanner = () => {
   return (
     <div className="flex justify-center">
-      <div className="hero bg-pink-50 pt-20 pb-12">
+      <div className="hero bg-pink-50 py-16">
         <div className="hero-content grid grid-cols-2 lg:px-8">
           <div>
             <h1 className="text-5xl font-bold w-5/6 leading-[60px]">

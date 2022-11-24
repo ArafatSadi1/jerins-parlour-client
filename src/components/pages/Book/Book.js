@@ -13,9 +13,9 @@ const Book = () => {
         {/* <!-- Page content here --> */}
         <Outlet></Outlet>
       </div>
-      <div className="drawer-side">
+      <div className="drawer-side pt-2">
         <label htmlFor="booking-sidebar" className="drawer-overlay"></label>
-        <ul className="p-4 overflow-y-auto w-56 bg-base-100 text-base-content flex flex-col gap-4">
+        <ul className="p-4 overflow-y-auto w-52 bg-base-100 text-base-content flex flex-col gap-4">
           {/* <!-- Sidebar content here --> */}
           <li>
             <NavLink
