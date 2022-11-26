@@ -65,7 +65,7 @@ const AddReview = () => {
         <h1 className="font-bold text-2xl mb-5">Please give your feedback</h1>
         <div className="mt-4">
           <input
-            className="border border-[#b8b8b8] focus:outline-none focus:border-secondary block rounded-lg p-2 mt-1 w-full"
+            className="border border-[#b8b8b8] focus:outline-none focus:border-secondary block rounded p-2 mt-1 w-full"
             type="text"
             ref={getPosition}
             placeholder="Your profession"
@@ -75,7 +75,7 @@ const AddReview = () => {
 
         <div className="mt-4">
           <textarea
-            className="border border-[#b8b8b8] focus:outline-none focus:border-secondary block rounded-lg p-2 mt-1 w-full"
+            className="border border-[#b8b8b8] focus:outline-none focus:border-secondary block rounded p-2 mt-1 w-full"
             name="message"
             id="message"
             ref={getReview}
@@ -113,7 +113,7 @@ const AddReview = () => {
         </div>
         <div className="flex justify-between gap-5 mt-4">
           <input
-            className="mt-4 bg-secondary py-2 px-4 rounded-lg text-white hover:shadow-md hover:shadow-primary duration-300 cursor-pointer"
+            className="py-2 px-4 bg-secondary rounded text-lg text-white hover:bg-[#d400a2] duration-300 cursor-pointer"
             type="submit"
             value="Submit Review"
             required

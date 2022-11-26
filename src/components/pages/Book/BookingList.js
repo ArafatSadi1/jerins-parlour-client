@@ -15,7 +15,7 @@ const BookingList = () => {
     isLoading,
     refetch,
   } = useQuery("booking", () =>
-    fetch(`https://jerins-parlour.onrender.com/booking/${user.email}`, {
+    fetch(`https://jerins-parlour.onrender.com/booking/${user?.email}`, {
       method: "GET",
       headers: {
         "content-type": "application/json",
@@ -37,7 +37,7 @@ const BookingList = () => {
       <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
         {bookedItems?.map((bookedItem) => (
           <BookingCard
-            key={bookedItem._id}
+            key={bookedItem?._id}
             bookedItem={bookedItem}
             refetch={refetch}
           ></BookingCard>

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import cartLogo from "../../../Image_Icon/Icon/Group.png";
-import reviewLogo from "../../../Image_Icon/Icon/Group 1368.png";
+import { BiCart } from "react-icons/bi";
+import { TbMessageDots } from "react-icons/tb";
 
 const Book = () => {
   const activeClassName = "flex items-center gap-2 border-r-2 border-secondary";
@@ -24,7 +24,7 @@ const Book = () => {
               }
               to="bookingList"
             >
-              <img width={20} src={cartLogo} alt="" />
+              <BiCart className="w-[20px] h-[20px] text-zinc-500" />
               Booking List
             </NavLink>
           </li>
@@ -35,7 +35,7 @@ const Book = () => {
               }
               to="addReview"
             >
-              <img width={20} src={reviewLogo} alt="" />
+              <TbMessageDots className="w-[20px] h-[20px] text-zinc-500" />
               Review
             </NavLink>
           </li>

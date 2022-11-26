@@ -21,13 +21,13 @@ const ContactUs = () => {
           <input
             type="text"
             placeholder="First Name"
-            className="input w-full focus:outline-none rounded"
+            className="input w-full border border-[#b8b8b8] focus:outline-none focus:border-secondary rounded"
             required
           />
           <input
             type="text"
             placeholder="Last Name"
-            className="input w-full focus:outline-none rounded"
+            className="input w-full border border-[#b8b8b8] focus:outline-none focus:border-secondary rounded"
             required
           />
         </div>
@@ -35,22 +35,22 @@ const ContactUs = () => {
           <input
             type="email"
             placeholder="Email"
-            className="input w-full focus:outline-none rounded"
+            className="input w-full border border-[#b8b8b8] focus:outline-none focus:border-secondary rounded"
             required
           />
           <input
             type="text"
             placeholder="Phone Number"
-            className="input w-full focus:outline-none rounded"
+            className="input w-full border border-[#b8b8b8] focus:outline-none focus:border-secondary rounded"
           />
         </div>
         <textarea
-          className="textarea w-full lg:w-1/2 focus:outline-none rounded"
+          className="textarea w-full lg:w-1/2 border border-[#b8b8b8] focus:outline-none focus:border-secondary rounded h-52"
           placeholder="Your Message"
           required
         ></textarea>
         <input
-          className="mt-6 py-2 px-4 bg-secondary rounded text-lg text-white hover:bg-[#d400a2] duration-300"
+          className="mt-6 py-2 px-4 bg-secondary rounded text-lg text-white hover:bg-[#d400a2] duration-300 cursor-pointer"
           type="submit"
           value="Send Message"
         />
