@@ -50,7 +50,7 @@ const MakeAdmin = () => {
           <div className="flex items-center">
             <input
               type="email"
-              placeholder="Enter Existing User Email"
+              placeholder="Enter an existing user email"
               className="input input-bordered w-full text-lg focus:outline-none rounded-l rounded-r-none"
               {...register("email", {
                 required: {

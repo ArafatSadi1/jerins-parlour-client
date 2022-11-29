@@ -39,16 +39,16 @@ const OrderList = () => {
           {orderList.map((order, index) => (
             <tr key={order._id}>
               <th>{index + 1}</th>
-              <th>{order.displayName ? order.displayName : "No Name"}</th>
-              <td>{order.email}</td>
-              <td>{order.name}</td>
+              <th>{order?.displayName ? order.displayName : "No Name"}</th>
+              <td>{order?.email}</td>
+              <td>{order?.name}</td>
               <td>
-                {order.paid ? (
-                  <span className="btn btn-success btn-sm text-white">
+                {order?.paid ? (
+                  <span className="rounded bg-green-500 py-1 px-3 uppercase text-white">
                     Done
                   </span>
                 ) : (
-                  <span className="btn btn-error btn-sm text-white">
+                  <span className="rounded bg-error py-1 px-3 uppercase text-white duration-300">
                     Pending
                   </span>
                 )}

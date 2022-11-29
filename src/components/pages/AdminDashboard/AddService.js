@@ -59,8 +59,12 @@ const AddService = () => {
 
   return (
     <div className="m-8">
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="p-4 bg-base-100 grid grid-cols-1 lg:grid-cols-2">
+      <h2 className="text-4xl font-semibold text-center my-4">Make an Admin</h2>
+      <div className="flex justify-center">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="md:w-[500px] p-4 bg-base-100"
+        >
           <div>
             <label className="label">
               <span className="label-text font-semibold">Service Title</span>
@@ -68,7 +72,7 @@ const AddService = () => {
             <input
               type="text"
               placeholder="Enter Title"
-              className="input input-bordered w-full max-w-xs"
+              className="input w-full border border-[#b8b8b8] focus:outline-none focus:border-secondary rounded"
               {...register("title", {
                 required: {
                   value: true,
@@ -92,7 +96,7 @@ const AddService = () => {
             <input
               type="number"
               placeholder="$Price"
-              className="input input-bordered w-full max-w-xs"
+              className="input w-full border border-[#b8b8b8] focus:outline-none focus:border-secondary rounded"
               {...register("price", {
                 required: {
                   value: true,
@@ -114,7 +118,7 @@ const AddService = () => {
               <span className="label-text font-semibold">Description</span>
             </label>
             <textarea
-              className="textarea textarea-bordered w-full max-w-xs"
+              className="h-[100px] border border-[#b8b8b8] focus:outline-none focus:border-secondary block rounded p-2 mt-1 w-full"
               placeholder="Enter Description"
               {...register("description", {
                 required: {
@@ -138,7 +142,7 @@ const AddService = () => {
             </label>
             <input
               type="file"
-              className="input pl-0 w-full max-w-xs"
+              className="input w-full border border-[#b8b8b8] focus:outline-none focus:border-secondary rounded pt-1"
               {...register("image", {
                 required: {
                   value: true,
@@ -154,13 +158,13 @@ const AddService = () => {
               )}
             </label>
           </div>
-        </div>
-        <input
-          type="submit"
-          value="Submit"
-          className="btn btn-secondary block ml-auto mt-2"
-        />
-      </form>
+          <input
+            type="submit"
+            value="Add"
+            className="w-[50%] mt-3 py-2 px-4 bg-secondary rounded text-lg text-white hover:bg-[#d400a2] duration-300 cursor-pointer"
+          />
+        </form>
+      </div>
     </div>
   );
 };
