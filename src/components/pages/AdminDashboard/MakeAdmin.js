@@ -51,7 +51,7 @@ const MakeAdmin = () => {
             <input
               type="email"
               placeholder="Enter an existing user email"
-              className="input input-bordered w-full text-lg focus:outline-none rounded-l rounded-r-none"
+              className="input w-full border border-[#b8b8b8] focus:outline-none focus:border-secondary rounded-l rounded-r-none"
               {...register("email", {
                 required: {
                   value: true,

@@ -52,8 +52,8 @@ const Testimonials = () => {
           {reviews?.map((review) => (
             <div>
               <div className="relative mt-16 w-full text-black ">
-                <div className="bg-gray-100 h-72 p-10 m-5 border rounded-md shadow-lg">
-                  <div className="avatar absolute top-[-45px] left-[45px]">
+                <div className=" bg-pink-50 h-72 p-10 m-5 border rounded-b rounded-t-[50px] shadow">
+                  <div className="avatar absolute top-[-45px] left-[42%]">
                     <div className="w-20 border-[3px] border-secondary rounded-full">
                       {review?.image ? (
                         <img src={review?.image} alt="" />
@@ -68,24 +68,26 @@ const Testimonials = () => {
                     <p className="text-sm md:text-lg text-justify mt-4">
                       {review?.review?.slice(0, 150)}...
                     </p>
-                    <div>
-                      <div className="flex items-center gap-2 pt-4">
-                        <h2 className="text-sm md:text-lg text-justify font-bold">
-                          {review?.name}
-                        </h2>
-                        <h3 className="text-xs md:text-md text-secondary">
-                          {review?.position}
-                        </h3>
-                      </div>
+                    <div className="mt-6 h-full flex justify-end items-end">
                       <div>
                         <div>
                           <div>
-                            <ReactStars
-                              size={20}
-                              value={review?.rating}
-                              edit={false}
-                            ></ReactStars>
+                            <div>
+                              <ReactStars
+                                size={15}
+                                value={review?.rating}
+                                edit={false}
+                              ></ReactStars>
+                            </div>
                           </div>
+                        </div>
+                        <div className="">
+                          <h2 className="text-sm md:text-lg text-justify font-bold">
+                            {review?.name}
+                          </h2>
+                          <h3 className="text-xs md:text-md text-secondary">
+                            {review?.position}
+                          </h3>
                         </div>
                       </div>
                     </div>
