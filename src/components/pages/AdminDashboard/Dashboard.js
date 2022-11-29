@@ -1,8 +1,9 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import cartLogo from "../../../Image_Icon/Icon/Group.png";
-import addLogo from "../../../Image_Icon/Icon/Group 1360.png";
-import manageLogo from "../../../Image_Icon/Icon/Group 1368.png";
+import { BsCartCheck } from "react-icons/bs";
+import { AiOutlinePlusSquare } from "react-icons/ai";
+import { MdMiscellaneousServices } from "react-icons/md";
+import { RiAdminLine } from "react-icons/ri";
 
 const Dashboard = () => {
   const activeClassName = "flex items-center gap-2 border-r-2 border-secondary";
@@ -25,8 +26,8 @@ const Dashboard = () => {
               }
               to="orderList"
             >
-              <img width={20} src={cartLogo} alt="" />
-              Order List
+              <BsCartCheck className="w-[20px] h-[20px] text-zinc-500" />
+              Customers Order List
             </NavLink>
           </li>
           <li>
@@ -36,8 +37,8 @@ const Dashboard = () => {
               }
               to="addService"
             >
-              <img width={20} src={cartLogo} alt="" />
-              Add Service
+              <AiOutlinePlusSquare className="w-[20px] h-[20px] text-zinc-500" />
+              Add New Service
             </NavLink>
           </li>
           <li>
@@ -47,8 +48,8 @@ const Dashboard = () => {
               }
               to="manageService"
             >
-              <img width={20} src={addLogo} alt="" />
-              Manage Service
+              <MdMiscellaneousServices className="w-[20px] h-[20px] text-zinc-500" />
+              Manage Services
             </NavLink>
           </li>
           <li>
@@ -58,8 +59,8 @@ const Dashboard = () => {
               }
               to="makeAdmin"
             >
-              <img width={20} src={manageLogo} alt="" />
-              Make Admin
+              <RiAdminLine className="w-[20px] h-[20px] text-zinc-500" />
+              Make New Admin
             </NavLink>
           </li>
         </ul>

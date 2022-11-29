@@ -81,7 +81,11 @@ const Header = () => {
           </button>
         ) : (
           <NavLink
-            className="py-2 px-4 rounded border border-primary text-lg hover:bg-primary hover:text-white duration-300"
+            className={({ isActive }) =>
+              isActive
+                ? "py-2 px-4 rounded border border-primary bg-primary text-white text-lg"
+                : "py-2 px-4 rounded border border-primary text-lg hover:bg-primary hover:text-white duration-300"
+            }
             to="/login"
           >
             Login

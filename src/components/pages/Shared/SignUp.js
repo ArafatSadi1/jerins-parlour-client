@@ -49,10 +49,10 @@ const SignUp = () => {
   return (
     <div className="my-12 grid justify-center items-center">
       <div className="w-screen max-w-md bg-base-100 border border-slate-600 rounded p-8">
-        <h2 className="text-2xl font-bold mb-8">Create an account</h2>
+        <h2 className="text-2xl font-bold mb-4">Create an account</h2>
         <form onSubmit={handleSubmit(onSubmit)} className="form-control">
           <input
-            className="input input-bordered"
+            className="input w-full border border-[#b8b8b8] focus:outline-none focus:border-secondary rounded"
             placeholder="your Name"
             {...register("name", {
               required: {
@@ -70,7 +70,7 @@ const SignUp = () => {
           </label>
 
           <input
-            className="input input-bordered"
+            className="input w-full border border-[#b8b8b8] focus:outline-none focus:border-secondary rounded"
             type="email"
             placeholder="Email"
             {...register("email", {
@@ -98,7 +98,7 @@ const SignUp = () => {
           </label>
 
           <input
-            className="input input-bordered"
+            className="input w-full border border-[#b8b8b8] focus:outline-none focus:border-secondary rounded"
             placeholder="Password"
             type="password"
             {...register("password", {
@@ -126,7 +126,7 @@ const SignUp = () => {
           </label>
 
           <input
-            className="input input-bordered"
+            className="input w-full border border-[#b8b8b8] focus:outline-none focus:border-secondary rounded"
             placeholder="Confirm Password"
             type="password"
             {...register("confirmPass", {
@@ -161,14 +161,16 @@ const SignUp = () => {
           <p className="text-error text-sm">{signupError?.message}</p>
           <input
             type="submit"
-            className="btn btn-secondary"
+            className="btn btn-secondary rounded"
             value="Create an account"
           />
-          <p className="text-sm mt-2 text-center">
+          <p className="text-sm mt-2">
             Already have an account?
-            <Link className="text-secondary" to="/login">
-              Log in
-            </Link>
+            <span className="ml-1">
+              <Link className="text-secondary" to="/login">
+                Log in
+              </Link>
+            </span>
           </p>
         </form>
       </div>
@@ -176,7 +178,7 @@ const SignUp = () => {
       <p className="text-error text-sm">{GError?.message}</p>
       <button
         onClick={() => signInWithGoogle()}
-        className="btn btn-outline mt-4 rounded-full pr-32"
+        className="btn btn-outline rounded-full pr-32 duration-300"
       >
         <img className="mr-24" width={30} src={google} alt="" /> Continue With
         Google
