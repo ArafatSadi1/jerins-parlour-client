@@ -59,7 +59,7 @@ const AddService = () => {
 
   return (
     <div className="m-8">
-      <h2 className="text-4xl font-semibold text-center my-4">Make an Admin</h2>
+      <h2 className="text-4xl font-semibold text-center my-4">Add a new service</h2>
       <div className="flex justify-center">
         <form
           onSubmit={handleSubmit(onSubmit)}
